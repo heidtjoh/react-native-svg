@@ -29,6 +29,9 @@ class PropHelper {
    * @return size of input array
    */
   static int toMatrixData(ReadableArray value, float[] sRawMatrix, float mScale) {
+    if (value == null) {
+        return 0;
+    }
     int fromSize = value.size();
     if (fromSize != inputMatrixDataSize) {
       return fromSize;
